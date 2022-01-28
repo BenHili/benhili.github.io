@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "Creating a blog"
 date:   2022-01-28 15:43:08 +1100
 categories: jekyll update
 ---

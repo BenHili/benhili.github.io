@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en" prefix="og: http://ogp.me/ns#" xmlns:og="http://opengraphprotocol.org/schema/">
+
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=900" />
+    <link href="/i/favicon.png" rel="icon" sizes="32x32">
+
+    <link href='/css/style.css' rel='stylesheet' type='text/css' />
+    <link href="/css/syntax.css" rel="stylesheet" type='text/css' />
+
+    <title>{{ page.title }} @ benhili.xyz</title>
+
+    <link href="/blog/atom.xml" rel="alternate" title="Ben Hili's blog" type="application/atom+xml" />
+
+    <meta name="author" content="Nikita Prokopov" />
+
+    <meta property="og:title" content="{{ page.title }}" />
+    <meta property="og:url" content="https://benhili.xyz{{ page.url }}" />
+    {% if page.categories contains 'blog' %}
+    <meta property="og:type" content="article" />
+
+    <meta property="article:published_time" content='{{ page.date | date: "%Y-%m-%d" }}' />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="{{ page.title }}" />
+    {% endif %}
+
+    {% if page.summary %}
+    <meta property="og:description" content="{{ page.summary }}" />
+    <meta name="twitter:description" content="{{ page.summary }}" />
+    {% endif %}
+
+    <meta property="og:site_name" content="benhili.xyz" />
+    <meta property="profile:first_name" content="Ben" />
+    <meta property="profile:last_name" content="Hili" />
+    <meta property="profile:username" content="benhili" />
+    <meta property="profile:gender" content="male" />
+
+    <meta name="twitter:creator" content="@benhili" />
+</head>
+
+<body>
+    <div class="page {{ page.class }}">
+
+        {{ content }}
+
+        <div class="preload"></div>
+
+    </div>
+</body>
